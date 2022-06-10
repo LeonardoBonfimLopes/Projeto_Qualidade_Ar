@@ -1,0 +1,1776 @@
+[
+    {
+        "id": "2b07a2a83cabf113",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c9f317b657fd2acb",
+        "type": "ui_gauge",
+        "z": "2b07a2a83cabf113",
+        "name": "Temp",
+        "group": "34f90f9791caf236",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "ºC",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 550,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "657d4d9129176519",
+        "type": "mqtt in",
+        "z": "2b07a2a83cabf113",
+        "name": "",
+        "topic": "topico_sensor_temperatura",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "2bc52c51.dbbb94",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 80,
+        "wires": [
+            [
+                "c9f317b657fd2acb",
+                "3012d799e3ad2532",
+                "68b8480c7688e18c"
+            ]
+        ]
+    },
+    {
+        "id": "76e3d009f30493c4",
+        "type": "mqtt in",
+        "z": "2b07a2a83cabf113",
+        "name": "",
+        "topic": "topico_sensor_umidade",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "2bc52c51.dbbb94",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 200,
+        "wires": [
+            [
+                "2cd899082bda4c0e",
+                "a3cdb5cc5ece3ee3",
+                "cb6b7689ec4bf2b3"
+            ]
+        ]
+    },
+    {
+        "id": "7a4b24afb5c0505a",
+        "type": "mqtt in",
+        "z": "2b07a2a83cabf113",
+        "name": "",
+        "topic": "topico_sensor_h2",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "2bc52c51.dbbb94",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 360,
+        "wires": [
+            [
+                "3f91c69dff06e32d",
+                "a57d10e3db31bfac",
+                "cd1bc49980fbaf91"
+            ]
+        ]
+    },
+    {
+        "id": "f3177587fadf0ba6",
+        "type": "mqtt in",
+        "z": "2b07a2a83cabf113",
+        "name": "",
+        "topic": "topico_sensor_co",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "2bc52c51.dbbb94",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 640,
+        "wires": [
+            [
+                "16b25960f258acf3",
+                "1a18a750d66232ab",
+                "8b0384dfabf809f6"
+            ]
+        ]
+    },
+    {
+        "id": "975be43da57e84b8",
+        "type": "mqtt in",
+        "z": "2b07a2a83cabf113",
+        "name": "",
+        "topic": "topico_sensor_nh3",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "2bc52c51.dbbb94",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 480,
+        "wires": [
+            [
+                "b5af55c0523a0564",
+                "202c0df4c8cc267b",
+                "2cb184525d967614"
+            ]
+        ]
+    },
+    {
+        "id": "3dfdf0c40533392c",
+        "type": "mqtt in",
+        "z": "2b07a2a83cabf113",
+        "name": "",
+        "topic": "topico_sensor_no2",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "2bc52c51.dbbb94",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 760,
+        "wires": [
+            [
+                "dcdb6b9c562b5b7f",
+                "12e6b24e1a52af32",
+                "a46551c0e5a90c44"
+            ]
+        ]
+    },
+    {
+        "id": "2cd899082bda4c0e",
+        "type": "ui_gauge",
+        "z": "2b07a2a83cabf113",
+        "name": "Umi",
+        "group": "bb04578f7d85744e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 550,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "3f91c69dff06e32d",
+        "type": "ui_chart",
+        "z": "2b07a2a83cabf113",
+        "name": "Gráfico H2",
+        "group": "4d00bd4b3e917ea7",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Gráfico ",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1000",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 570,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "16b25960f258acf3",
+        "type": "ui_chart",
+        "z": "2b07a2a83cabf113",
+        "name": "Gráfico CO",
+        "group": "3a71113fc1fe586d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Gráfico",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1000",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 570,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b5af55c0523a0564",
+        "type": "ui_chart",
+        "z": "2b07a2a83cabf113",
+        "name": "Gráfico NH3",
+        "group": "c1fae8720019f1c4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Gráfico",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "500",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 570,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dcdb6b9c562b5b7f",
+        "type": "ui_chart",
+        "z": "2b07a2a83cabf113",
+        "name": "Gráfico NO2",
+        "group": "c6f2db4cbd265e4f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Gráfico",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "10",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": true,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 570,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "12e6b24e1a52af32",
+        "type": "ui_gauge",
+        "z": "2b07a2a83cabf113",
+        "name": "NO2",
+        "group": "c6f2db4cbd265e4f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "NO2",
+        "label": "ppm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 550,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "202c0df4c8cc267b",
+        "type": "ui_gauge",
+        "z": "2b07a2a83cabf113",
+        "name": "",
+        "group": "c1fae8720019f1c4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "NH3",
+        "label": "ppm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 550,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "1a18a750d66232ab",
+        "type": "ui_gauge",
+        "z": "2b07a2a83cabf113",
+        "name": "CO",
+        "group": "3a71113fc1fe586d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "CO",
+        "label": "ppm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 550,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "a57d10e3db31bfac",
+        "type": "ui_gauge",
+        "z": "2b07a2a83cabf113",
+        "name": "H2",
+        "group": "4d00bd4b3e917ea7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "H2",
+        "label": "ppm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 550,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "a3cdb5cc5ece3ee3",
+        "type": "ui_chart",
+        "z": "2b07a2a83cabf113",
+        "name": "Gráfico Umi",
+        "group": "bb04578f7d85744e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Gráfico",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 570,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3012d799e3ad2532",
+        "type": "ui_chart",
+        "z": "2b07a2a83cabf113",
+        "name": "Gráfico Temp",
+        "group": "34f90f9791caf236",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Gráfico",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 570,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a46551c0e5a90c44",
+        "type": "function",
+        "z": "2b07a2a83cabf113",
+        "name": "global_NO2",
+        "func": "global.set(\"NO2\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b0384dfabf809f6",
+        "type": "function",
+        "z": "2b07a2a83cabf113",
+        "name": "global_CO",
+        "func": "global.set(\"CO\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2cb184525d967614",
+        "type": "function",
+        "z": "2b07a2a83cabf113",
+        "name": "global_NH3",
+        "func": "global.set(\"NH3\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cd1bc49980fbaf91",
+        "type": "function",
+        "z": "2b07a2a83cabf113",
+        "name": "global_H2",
+        "func": "global.set(\"H2\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "68b8480c7688e18c",
+        "type": "function",
+        "z": "2b07a2a83cabf113",
+        "name": "global_temperatura",
+        "func": "global.set(\"temperatura\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb6b7689ec4bf2b3",
+        "type": "function",
+        "z": "2b07a2a83cabf113",
+        "name": "global_humidade",
+        "func": "global.set(\"humidade\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6231266aafca3c2e",
+        "type": "debug",
+        "z": "2b07a2a83cabf113",
+        "name": "resultado",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "7e91556e3185543c",
+        "type": "inject",
+        "z": "2b07a2a83cabf113",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "180",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 1000,
+        "wires": [
+            [
+                "3f8e53b566001fa7"
+            ]
+        ]
+    },
+    {
+        "id": "3f8e53b566001fa7",
+        "type": "function",
+        "z": "2b07a2a83cabf113",
+        "name": "INSERT",
+        "func": " \nvar temperatura = global.get(\"temperatura\");\nvar humidade = global.get(\"humidade\");\n\nmsg.topic = \"INSERT INTO tabela (temperature,humidity) VALUES (\"+temperatura+\",\"+humidade+\" );\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1000,
+        "wires": [
+            [
+                "39ec8373d47ba4c2"
+            ]
+        ]
+    },
+    {
+        "id": "8132ba69af798203",
+        "type": "debug",
+        "z": "2b07a2a83cabf113",
+        "name": "resultado",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "91facff2ce01628d",
+        "type": "inject",
+        "z": "2b07a2a83cabf113",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "180",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 1040,
+        "wires": [
+            [
+                "4eb27a8db85b2b91"
+            ]
+        ]
+    },
+    {
+        "id": "4eb27a8db85b2b91",
+        "type": "function",
+        "z": "2b07a2a83cabf113",
+        "name": "INSERT",
+        "func": " \nvar h2 = global.get(\"H2\");\nvar no2 = global.get(\"NO2\");\nvar nh3 = global.get(\"NH3\");\nvar co = global.get(\"CO\");\n\nmsg.topic = \"INSERT INTO tabelaGas (h2,no2,nh3,co) VALUES (\"+h2+\",\"+no2+\",\"+nh3+\",\"+co+\");\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1040,
+        "wires": [
+            [
+                "35b6d7fb8a9c8d17"
+            ]
+        ]
+    },
+    {
+        "id": "bd87adfae3d9286d",
+        "type": "function",
+        "z": "2b07a2a83cabf113",
+        "name": "DELET",
+        "func": "\nmsg.topic = \"Delete  FROM tabela ;\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1460,
+        "wires": [
+            [
+                "9e79b0af552212bc"
+            ]
+        ]
+    },
+    {
+        "id": "18766d624b488e89",
+        "type": "debug",
+        "z": "2b07a2a83cabf113",
+        "name": "dados mysql",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "07fa8fb35c566312",
+        "type": "inject",
+        "z": "2b07a2a83cabf113",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 1460,
+        "wires": [
+            [
+                "bd87adfae3d9286d"
+            ]
+        ]
+    },
+    {
+        "id": "090878f2c8c8de06",
+        "type": "function",
+        "z": "2b07a2a83cabf113",
+        "name": "DELET",
+        "func": "\nmsg.topic = \"Delete  FROM tabelaGas ;\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1500,
+        "wires": [
+            [
+                "0926463e34b334f7"
+            ]
+        ]
+    },
+    {
+        "id": "8121e2bcc150f2f4",
+        "type": "debug",
+        "z": "2b07a2a83cabf113",
+        "name": "dados mysql",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "2c81375d038e1777",
+        "type": "inject",
+        "z": "2b07a2a83cabf113",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 1500,
+        "wires": [
+            [
+                "090878f2c8c8de06"
+            ]
+        ]
+    },
+    {
+        "id": "743737d971443905",
+        "type": "inject",
+        "z": "2b07a2a83cabf113",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 1180,
+        "wires": [
+            [
+                "458697cfe8d5fe8e"
+            ]
+        ]
+    },
+    {
+        "id": "458697cfe8d5fe8e",
+        "type": "function",
+        "z": "2b07a2a83cabf113",
+        "name": "SELECT",
+        "func": "msg.topic = \"SELECT h2 as H2, nh3 as NH3, timeStamp as timeStamp FROM tabelaGas where timeStamp >= now() - 84600;\"\nreturn msg;\n\n//msg.topic = \"SELECT * FROM tempLog where timeStamp >= now() - 84600;\"\n\n//msg.topic = \"SELECT temperature as temperatura, humidity as humidade, timeStamp FROM tempLog where timeStamp >= now() - 84600;\"\n\n//msg.topic = \"INSERT INTO tempLog (temperature,humidity) VALUES (\"+temperatura+\",\"+humidade+\" );\"\n\n//SELECT MAX(\"producaocatanduva\") as producao, time FROM \"Solar_IFSP\"  WHERE time >= now() - 30d GROUP BY time(1d)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1180,
+        "wires": [
+            [
+                "3d55e9858191299a"
+            ]
+        ]
+    },
+    {
+        "id": "0cd8212e36223830",
+        "type": "change",
+        "z": "2b07a2a83cabf113",
+        "name": "Format data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(\t  $series := [\t    { \"label\": \"H2 (ppm)\" , \"field\": \"H2\"  },\t    {  \"label\": \"NH3 (ppm)\", \"field\": \"NH3\" }\t\t  ];\t  $xaxis := \"timeStamp\";\t  [\t    {\t      \"series\": $series.label,\t      \"data\": $series.[\t        (\t          $yaxis := $.field;\t          $$.payload.{\t            \"x\": $lookup($, $xaxis),\t            \"y\": $lookup($, $yaxis)\t          }\t        )\t      ]\t    }\t  ]\t)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 1180,
+        "wires": [
+            [
+                "dd2e3769a8cffbc6"
+            ]
+        ]
+    },
+    {
+        "id": "dd2e3769a8cffbc6",
+        "type": "ui_chart",
+        "z": "2b07a2a83cabf113",
+        "name": "24 hours H2 e NH3",
+        "group": "f0df70041d9150e0",
+        "order": 1,
+        "width": "11",
+        "height": "7",
+        "label": "Gráfico H2 e NH3 Database",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#00e68c",
+            "#2d2da8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 950,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ed95f23dfe1ce116",
+        "type": "inject",
+        "z": "2b07a2a83cabf113",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 1220,
+        "wires": [
+            [
+                "9ccd0662ed193fb0"
+            ]
+        ]
+    },
+    {
+        "id": "9ccd0662ed193fb0",
+        "type": "function",
+        "z": "2b07a2a83cabf113",
+        "name": "SELECT",
+        "func": "msg.topic = \"SELECT no2 as NO2, co as CO, timeStamp as timeStamp FROM tabelaGas where timeStamp >= now() - 84600;\"\nreturn msg;\n\n//msg.topic = \"SELECT * FROM tempLog where timeStamp >= now() - 84600;\"\n\n//msg.topic = \"SELECT temperature as temperatura, humidity as humidade, timeStamp FROM tempLog where timeStamp >= now() - 84600;\"\n\n//msg.topic = \"INSERT INTO tempLog (temperature,humidity) VALUES (\"+temperatura+\",\"+humidade+\" );\"\n\n//SELECT MAX(\"producaocatanduva\") as producao, time FROM \"Solar_IFSP\"  WHERE time >= now() - 30d GROUP BY time(1d)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1220,
+        "wires": [
+            [
+                "e456bd8f6bd51fa3"
+            ]
+        ]
+    },
+    {
+        "id": "04c90aba21a1cced",
+        "type": "change",
+        "z": "2b07a2a83cabf113",
+        "name": "Format data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(\t  $series := [\t    { \"label\": \"NO2 (ppm)\" , \"field\": \"NO2\"  },\t    {  \"label\": \"CO (ppm)\", \"field\": \"CO\" }\t\t  ];\t  $xaxis := \"timeStamp\";\t  [\t    {\t      \"series\": $series.label,\t      \"data\": $series.[\t        (\t          $yaxis := $.field;\t          $$.payload.{\t            \"x\": $lookup($, $xaxis),\t            \"y\": $lookup($, $yaxis)\t          }\t        )\t      ]\t    }\t  ]\t)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 1220,
+        "wires": [
+            [
+                "a64fd2b70798d7a6"
+            ]
+        ]
+    },
+    {
+        "id": "a64fd2b70798d7a6",
+        "type": "ui_chart",
+        "z": "2b07a2a83cabf113",
+        "name": "24 hours CO e NO2",
+        "group": "2e6619e28c0f7199",
+        "order": 1,
+        "width": "11",
+        "height": "7",
+        "label": "Gráfico CO e NO2 Database",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#00e68c",
+            "#2d2da8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 960,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6d850c15bcb896f2",
+        "type": "inject",
+        "z": "2b07a2a83cabf113",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 1140,
+        "wires": [
+            [
+                "c6cc0bd71ab3090c"
+            ]
+        ]
+    },
+    {
+        "id": "c6cc0bd71ab3090c",
+        "type": "function",
+        "z": "2b07a2a83cabf113",
+        "name": "SELECT",
+        "func": "msg.topic = \"SELECT temperature as temperatura, humidity as humidade, timeStamp as timeStamp FROM tabela where timeStamp >= now() - 84600;\"\nreturn msg;\n\n//msg.topic = \"SELECT * FROM tempLog where timeStamp >= now() - 84600;\"\n\n//msg.topic = \"SELECT temperature as temperatura, humidity as humidade, timeStamp FROM tempLog where timeStamp >= now() - 84600;\"\n\n//msg.topic = \"INSERT INTO tempLog (temperature,humidity) VALUES (\"+temperatura+\",\"+humidade+\" );\"\n\n//SELECT MAX(\"producaocatanduva\") as producao, time FROM \"Solar_IFSP\"  WHERE time >= now() - 30d GROUP BY time(1d)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1140,
+        "wires": [
+            [
+                "8f8acb0c20899749"
+            ]
+        ]
+    },
+    {
+        "id": "0d0beeeccfcfbf68",
+        "type": "change",
+        "z": "2b07a2a83cabf113",
+        "name": "Format data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(\t  $series := [\t    { \"label\": \"temperatura (°C)\" , \"field\": \"temperatura\"  },\t    {  \"label\": \"humidade (%)\", \"field\": \"humidade\" }\t\t  ];\t  $xaxis := \"timeStamp\";\t  [\t    {\t      \"series\": $series.label,\t      \"data\": $series.[\t        (\t          $yaxis := $.field;\t          $$.payload.{\t            \"x\": $lookup($, $xaxis),\t            \"y\": $lookup($, $yaxis)\t          }\t        )\t      ]\t    }\t  ]\t)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 1140,
+        "wires": [
+            [
+                "ea0690ba0a7e6583"
+            ]
+        ]
+    },
+    {
+        "id": "ea0690ba0a7e6583",
+        "type": "ui_chart",
+        "z": "2b07a2a83cabf113",
+        "name": "24 hours temp humi",
+        "group": "6b23f25314cc50b0",
+        "order": 1,
+        "width": 11,
+        "height": 7,
+        "label": "Gráfico Temperatura/Humidade Banco de Dados",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#00e68c",
+            "#2d2da8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 960,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3a0365499d09d694",
+        "type": "inject",
+        "z": "2b07a2a83cabf113",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 1300,
+        "wires": [
+            [
+                "9575bee4b3128817"
+            ]
+        ]
+    },
+    {
+        "id": "9575bee4b3128817",
+        "type": "function",
+        "z": "2b07a2a83cabf113",
+        "name": "SELECT",
+        "func": "\nmsg.topic = \"SELECT * FROM tabela order by timeStamp DESC limit 10;\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1300,
+        "wires": [
+            [
+                "2e383cac9d8c360d"
+            ]
+        ]
+    },
+    {
+        "id": "f2d4a6a45c0c9f55",
+        "type": "ui_template",
+        "z": "2b07a2a83cabf113",
+        "group": "6b23f25314cc50b0",
+        "name": "Tabela com style",
+        "order": 2,
+        "width": 11,
+        "height": 7,
+        "format": "<div layout=\"row\" layout-align=\"start center\">\n  <span flex>Hora</span>\n  <span flex>temperatura</span>\n  <span flex>humidade</span>\n</div>\n<div layout=\"row\" layout-align=\"start center\" ng-repeat=\"row in msg.payload\">\n  <span flex style=\"color: green\">{{row.timeStamp}}</span>\n  <span flex style=\"color: red\">{{row.temperature}} °C</span>\n  <span flex style=\"color: black\">{{row.humidity}}%</span>\n\n</div>\n ",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 770,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "acbb458754889e1e",
+        "type": "inject",
+        "z": "2b07a2a83cabf113",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 1340,
+        "wires": [
+            [
+                "28526a5ee8269b21"
+            ]
+        ]
+    },
+    {
+        "id": "28526a5ee8269b21",
+        "type": "function",
+        "z": "2b07a2a83cabf113",
+        "name": "SELECT",
+        "func": "\nmsg.topic = \"SELECT h2, nh3, timeStamp FROM tabelaGas order by timeStamp DESC limit 10;\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1340,
+        "wires": [
+            [
+                "fb3ae40a0d139fb4"
+            ]
+        ]
+    },
+    {
+        "id": "2507efd0b6d6b553",
+        "type": "ui_template",
+        "z": "2b07a2a83cabf113",
+        "group": "f0df70041d9150e0",
+        "name": "Tabela com style",
+        "order": 2,
+        "width": "11",
+        "height": "7",
+        "format": "<div layout=\"row\" layout-align=\"start center\">\n  <span flex>Hora</span>\n  <span flex>H2</span>\n  <span flex>NH3</span>\n</div>\n<div layout=\"row\" layout-align=\"start center\" ng-repeat=\"row in msg.payload\">\n  <span flex style=\"color: green\">{{row.timeStamp}}</span>\n  <span flex style=\"color: red\">{{row.h2}} ppm</span>\n  <span flex style=\"color: black\">{{row.nh3}} ppm</span>\n\n</div>\n ",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 770,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a73d037d57bda58e",
+        "type": "inject",
+        "z": "2b07a2a83cabf113",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 1380,
+        "wires": [
+            [
+                "b586204e2028b40d"
+            ]
+        ]
+    },
+    {
+        "id": "b586204e2028b40d",
+        "type": "function",
+        "z": "2b07a2a83cabf113",
+        "name": "SELECT",
+        "func": "\nmsg.topic = \"SELECT no2, co, timeStamp FROM tabelaGas order by timeStamp DESC limit 10;\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1380,
+        "wires": [
+            [
+                "57c51a355daff16e"
+            ]
+        ]
+    },
+    {
+        "id": "66c8de65a52b6340",
+        "type": "ui_template",
+        "z": "2b07a2a83cabf113",
+        "group": "2e6619e28c0f7199",
+        "name": "Tabela com style",
+        "order": 2,
+        "width": "11",
+        "height": "7",
+        "format": "<div layout=\"row\" layout-align=\"start center\">\n  <span flex>Hora</span>\n  <span flex>CO</span>\n  <span flex>NO2</span>\n</div>\n<div layout=\"row\" layout-align=\"start center\" ng-repeat=\"row in msg.payload\">\n  <span flex style=\"color: green\">{{row.timeStamp}}</span>\n  <span flex style=\"color: red\">{{row.co2}} ppm</span>\n  <span flex style=\"color: black\">{{row.no2}} ppm</span>\n\n</div>\n ",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 770,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f8acb0c20899749",
+        "type": "mysql",
+        "z": "2b07a2a83cabf113",
+        "mydb": "7aaa48f5b20c4fe0",
+        "name": "conexao_mysql",
+        "x": 540,
+        "y": 1140,
+        "wires": [
+            [
+                "0d0beeeccfcfbf68"
+            ]
+        ]
+    },
+    {
+        "id": "3d55e9858191299a",
+        "type": "mysql",
+        "z": "2b07a2a83cabf113",
+        "mydb": "7aaa48f5b20c4fe0",
+        "name": "conexao_mysql",
+        "x": 540,
+        "y": 1180,
+        "wires": [
+            [
+                "0cd8212e36223830"
+            ]
+        ]
+    },
+    {
+        "id": "e456bd8f6bd51fa3",
+        "type": "mysql",
+        "z": "2b07a2a83cabf113",
+        "mydb": "7aaa48f5b20c4fe0",
+        "name": "conexao_mysql",
+        "x": 540,
+        "y": 1220,
+        "wires": [
+            [
+                "04c90aba21a1cced"
+            ]
+        ]
+    },
+    {
+        "id": "2e383cac9d8c360d",
+        "type": "mysql",
+        "z": "2b07a2a83cabf113",
+        "mydb": "7aaa48f5b20c4fe0",
+        "name": "conexao_mysql",
+        "x": 540,
+        "y": 1300,
+        "wires": [
+            [
+                "f2d4a6a45c0c9f55"
+            ]
+        ]
+    },
+    {
+        "id": "fb3ae40a0d139fb4",
+        "type": "mysql",
+        "z": "2b07a2a83cabf113",
+        "mydb": "7aaa48f5b20c4fe0",
+        "name": "conexao_mysql",
+        "x": 540,
+        "y": 1340,
+        "wires": [
+            [
+                "2507efd0b6d6b553"
+            ]
+        ]
+    },
+    {
+        "id": "57c51a355daff16e",
+        "type": "mysql",
+        "z": "2b07a2a83cabf113",
+        "mydb": "7aaa48f5b20c4fe0",
+        "name": "conexao_mysql",
+        "x": 540,
+        "y": 1380,
+        "wires": [
+            [
+                "66c8de65a52b6340"
+            ]
+        ]
+    },
+    {
+        "id": "9e79b0af552212bc",
+        "type": "mysql",
+        "z": "2b07a2a83cabf113",
+        "mydb": "7aaa48f5b20c4fe0",
+        "name": "conexao_mysql",
+        "x": 540,
+        "y": 1460,
+        "wires": [
+            [
+                "18766d624b488e89"
+            ]
+        ]
+    },
+    {
+        "id": "0926463e34b334f7",
+        "type": "mysql",
+        "z": "2b07a2a83cabf113",
+        "mydb": "7aaa48f5b20c4fe0",
+        "name": "conexao_mysql",
+        "x": 540,
+        "y": 1500,
+        "wires": [
+            [
+                "8121e2bcc150f2f4"
+            ]
+        ]
+    },
+    {
+        "id": "39ec8373d47ba4c2",
+        "type": "mysql",
+        "z": "2b07a2a83cabf113",
+        "mydb": "7aaa48f5b20c4fe0",
+        "name": "conexao_mysql",
+        "x": 540,
+        "y": 1000,
+        "wires": [
+            [
+                "6231266aafca3c2e"
+            ]
+        ]
+    },
+    {
+        "id": "35b6d7fb8a9c8d17",
+        "type": "mysql",
+        "z": "2b07a2a83cabf113",
+        "mydb": "7aaa48f5b20c4fe0",
+        "name": "conexao_mysql",
+        "x": 540,
+        "y": 1040,
+        "wires": [
+            [
+                "8132ba69af798203"
+            ]
+        ]
+    },
+    {
+        "id": "34f90f9791caf236",
+        "type": "ui_group",
+        "name": "Temperatura",
+        "tab": "618d4dd4b3a58ac3",
+        "order": 1,
+        "disp": true,
+        "width": 11,
+        "collapse": false
+    },
+    {
+        "id": "2bc52c51.dbbb94",
+        "type": "mqtt-broker",
+        "name": "mqtt_projeto",
+        "broker": "projetoleolopesifsp.duckdns.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "bb04578f7d85744e",
+        "type": "ui_group",
+        "name": "Umidade",
+        "tab": "618d4dd4b3a58ac3",
+        "order": 2,
+        "disp": true,
+        "width": 11,
+        "collapse": false
+    },
+    {
+        "id": "4d00bd4b3e917ea7",
+        "type": "ui_group",
+        "name": "Hidrogênio",
+        "tab": "941d9e5bb8f267fe",
+        "order": 1,
+        "disp": true,
+        "width": 11,
+        "collapse": false
+    },
+    {
+        "id": "3a71113fc1fe586d",
+        "type": "ui_group",
+        "name": "Monóxido de Carbono",
+        "tab": "87fa6c96517c4da5",
+        "order": 1,
+        "disp": true,
+        "width": 11,
+        "collapse": false
+    },
+    {
+        "id": "c1fae8720019f1c4",
+        "type": "ui_group",
+        "name": "Amônia",
+        "tab": "941d9e5bb8f267fe",
+        "order": 2,
+        "disp": true,
+        "width": 11,
+        "collapse": false
+    },
+    {
+        "id": "c6f2db4cbd265e4f",
+        "type": "ui_group",
+        "name": "Dióxido de Nitrogénio",
+        "tab": "87fa6c96517c4da5",
+        "order": 2,
+        "disp": true,
+        "width": 11,
+        "collapse": false
+    },
+    {
+        "id": "f0df70041d9150e0",
+        "type": "ui_group",
+        "name": "Dados no Banco de Dados",
+        "tab": "941d9e5bb8f267fe",
+        "order": 3,
+        "disp": true,
+        "width": "22",
+        "collapse": false
+    },
+    {
+        "id": "2e6619e28c0f7199",
+        "type": "ui_group",
+        "name": "Dados no Banco de Dados",
+        "tab": "87fa6c96517c4da5",
+        "order": 3,
+        "disp": true,
+        "width": "22",
+        "collapse": false
+    },
+    {
+        "id": "6b23f25314cc50b0",
+        "type": "ui_group",
+        "name": "Dados no Banco de Dados",
+        "tab": "618d4dd4b3a58ac3",
+        "order": 3,
+        "disp": true,
+        "width": "22",
+        "collapse": false
+    },
+    {
+        "id": "7aaa48f5b20c4fe0",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "database-1.cutlw16m8yjh.us-east-1.rds.amazonaws.com",
+        "port": "3306",
+        "db": "sensor",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "618d4dd4b3a58ac3",
+        "type": "ui_tab",
+        "name": "Temperatura e Umidade",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "941d9e5bb8f267fe",
+        "type": "ui_tab",
+        "name": "H2 e NH3",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "87fa6c96517c4da5",
+        "type": "ui_tab",
+        "name": "CO e NO2",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    }
+]
